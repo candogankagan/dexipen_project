@@ -26,23 +26,12 @@ function Layout() {
             description,
             image,
         }
+
         setCardList([card, ...cardList])
-
-        console.log('Item added!')
-        console.log(
-            'title : ',
-            title,
-            ' description : ',
-            description,
-            ' imageUrl : ',
-            image[0].file.name
-        )
-
         clearAll()
     }
 
     const clearAll = () => {
-        console.log('clearAll')
         setImage()
         setTitle('New title')
         setDescription('New description')
@@ -93,6 +82,7 @@ function Layout() {
                                     onChangeImage={(image) => setImage(image)}
                                 />
                                 <div
+                                    onClick={addToBasket}
                                     className={
                                         image == undefined
                                             ? styles.light
@@ -102,11 +92,10 @@ function Layout() {
                             </div>
                         </div>
                     </div>
-                    <button onClick={addToBasket}>Add to Basket</button>
                 </div>
             </div>
             {cardList.map((cardObj, index) => (
-                <Card cardObj={cardObj} />
+                <Card key={index} cardObj={cardObj} />
             ))}
         </>
     )
