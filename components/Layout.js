@@ -27,7 +27,9 @@ function Layout() {
             image,
         }
 
+        console.log(card)
         setCardList([card, ...cardList])
+        console.log(cardList)
         clearAll()
     }
 
@@ -79,7 +81,7 @@ function Layout() {
                             <div className={styles.icon}>
                                 <Image
                                     image={image}
-                                    onChangeImage={(image) => setImage(image)}
+                                    onChangeImage={(e) => setImage(e)}
                                 />
                                 <div
                                     onClick={addToBasket}

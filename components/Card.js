@@ -12,7 +12,9 @@ function Card({ cardObj }) {
                 </div>
                 <div className={styles.main}>
                     <div className={styles.titles}>
-                        <h3 id={styles.title}>{cardObj.title}</h3>
+                        <div>
+                            <h3 id={styles.title}>{cardObj.title}</h3>
+                        </div>
                         <div id={styles.text}>
                             <h4>{cardObj.description}</h4>
                         </div>

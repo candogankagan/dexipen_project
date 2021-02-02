@@ -37,6 +37,7 @@
 .titles {
     padding-left: 10px;
     padding-right: 10px;
+    height: 180px;
 }
 
 .titles h3 {
@@ -86,14 +87,15 @@
     color: rgb(197, 110, 79);
     font-size: 30px;
     font-weight: 600;
+    word-break: break-all;
 }
 
 #text {
+    height: 150px;
     padding-left: 5px;
     padding-right: 5px;
-    height: 135px;
     word-break: break-all;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 #text h4 {

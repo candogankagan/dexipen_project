@@ -9,7 +9,7 @@ function Image({ image, onChangeImage }) {
             <ImageUploading
                 multiple
                 value={image}
-                onChange={(image) => onChangeImage(image)}
+                onChange={(e) => onChangeImage(e)}
                 maxNumber={1}
                 dataURLKey='data_url'
             >
